@@ -26,3 +26,4 @@ gen### Example user template template
 gen### Scala template
 *.class
 *.log
+project/project/
