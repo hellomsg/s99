@@ -19,6 +19,9 @@ object P17 {
   def split[A](n: Int, ls: List[A]): (List[A], List[A]) =
     (ls.slice(0, n), ls.slice(n, ls.length + 1))
 
+  def splitBuiltin[A](n: Int, ls: List[A]): (List[A], List[A]) =
+    ls.splitAt(n)
+
   def splitRecursive[A](n: Int, ls: List[A]): (List[A], List[A]) = (n, ls) match {
     case (_, Nil) => (Nil, Nil)
     case (0, list) => (Nil, list)
