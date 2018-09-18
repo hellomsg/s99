@@ -3,6 +3,13 @@
   */
 import lists._
 object Main extends App{
-  override def main(args: Array[String]): Unit =
-    P16.drop(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
+  override def main(args: Array[String]): Unit = {
+    val withDefault: Option[Int] => Int = { case Some(x) => x case None => 0 }
+  }
+
+
+  def smaller[T](a: T, b: T)(implicit order: T => Ordered[T]) =
+		if (a < b) a else b
+
+  def test = "a" ++ "b"
 }
